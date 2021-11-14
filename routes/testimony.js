@@ -6,7 +6,7 @@ const { isLoggedIn, isAuthor, validateTestimony } = require('../middleware');
 
 const Testimony = require('../models/testimony');
 
-router.route('/').get(catchAsync(isLoggedIn, testimonys.index));
+router.route('/').get(catchAsync(testimonys.index));
 
 router.route('/').post(isLoggedIn, validateTestimony, catchAsync(testimonys.createTestimony));
 
