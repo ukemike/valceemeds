@@ -145,7 +145,7 @@ app.use('/home', homeRoutes)
 
 
 app.get('/home', (req, res) => {
-    res.render('/home/index')
+    res.render('home/index')
 });
 
 

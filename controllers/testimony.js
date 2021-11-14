@@ -1,7 +1,7 @@
 const Testimony = require("../models/testimony");
 
 module.exports.index = async (req, res) => {
-  const testimonys = await Testimony.find({}).populate("popupText");
+  const testimonys = await Testimony.find({})
   res.render("testimonys", { testimonys });
 };
 
