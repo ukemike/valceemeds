@@ -1,0 +1,71 @@
+<% layout('layouts/boilerplate')%>
+
+    <!-- :: Breadcrumb Header -->
+    <section class="breadcrumb-header" style="background-image: url(/assets/images/header/05_header.jpg)">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="banner">
+                        <h1>Testimonials</h1>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><i class="fas fa-angle-right"></i></li>
+                            <li>Tables Index</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- :: FAQs -->
+    <section class="faqs-page py-100-70">
+        <div class="container">
+            <div class="col-lg-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <!-- <th scope="col">#</th> -->
+                            <th scope="col">Name</th>
+                            <th scope="col">Occupation</th>
+                            <th scope="col">Testimony</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (let testimony of testimonys){%>
+                            <tr>
+                                <!-- <th scope="row">
+                                    <%= testimony._id %>
+                                </th> -->
+                                <td>
+                                    <%= testimony.name %>
+                                </td>
+                                <td>
+                                    <%= testimony.occupation %>
+                                </td>
+                                <td>
+                                    <%= testimony.testify %>
+                                </td>
+                                <td>
+                                    <% if( currentUser && testimony.author.equals(currentUser._id)) {%>
+                                    <a class="btn-1" href="/testimonys/<%=testimony._id%>/edit">Edit</a>
+                                    <% } %>
+                                </td>
+                                <td>
+                                    <% if( currentUser && testimony.author.equals(currentUser._id)) {%>
+                                        <form action="/testimonys/<%=testimony._id%>?_method=DELETE" method="POST">
+                                            <button class="btn-1">Delete</button>
+                                        </form>
+                                        <% } %>
+                                </td>
+                            </tr>
+                            <%}%>
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
+    </section>
