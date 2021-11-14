@@ -144,7 +144,7 @@ app.use('/testimonys', testimonyRoutes)
 app.use('/home', homeRoutes)
 
 
-app.get('/home', (req, res) => {
+app.get('/home/index', (req, res) => {
     res.render('home/index')
 });
 
