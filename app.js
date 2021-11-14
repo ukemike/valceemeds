@@ -21,7 +21,7 @@ const homeRoutes = require('./routes/home')
 
 const MongoDBStore = require("connect-mongo")(session);
 
-const dbUrl = process.env.DB_URL || 'mongodb+srv://mike123:master44@valceemeds.gqe8j.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/valceemeds';
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
