@@ -3238,6 +3238,33 @@ li.ui-timepicker-selected, .ui-timepicker-list li:hover, .ui-timepicker-list .ui
     position: relative;
     border: 2px solid #F9F9F9;
     padding: 12px;
+    width: 100%;
+    color: #1A3D7D;
+    font-size: 13px;
+    border-radius: 6px;
+    background-color: #F9F9F9;
+}
+
+.add-comments .inner-add-comments-box input:focus,
+.add-comments .inner-add-comments-box textarea:focus{
+    border-color: #13ADE5;
+}
+.add-comments .inner-add-comments-box textarea{
+    height: 200px;
+}
+
+
+
+
+/* second */
+.add-comment .inner-add-comments-box{
+    margin-bottom: 30px;
+}
+.add-comment .inner-add-comments-box input,
+.add-comment .inner-add-comments-box textarea{
+    position: relative;
+    border: 2px solid #F9F9F9;
+    padding: 12px;
     width: 50%;
     color: #1A3D7D;
     font-size: 13px;
@@ -3246,8 +3273,8 @@ li.ui-timepicker-selected, .ui-timepicker-list li:hover, .ui-timepicker-list .ui
 }
 
 @media (max-width: 991px){
-    .add-comments .inner-add-comments-box input,
-    .add-comments .inner-add-comments-box textarea{
+    .add-comment .inner-add-comments-box input,
+    .add-comment .inner-add-comments-box textarea{
         position: relative;
         border: 2px solid #F9F9F9;
         padding: 12px;
@@ -3259,11 +3286,11 @@ li.ui-timepicker-selected, .ui-timepicker-list li:hover, .ui-timepicker-list .ui
     }
 }
 
-.add-comments .inner-add-comments-box input:focus,
-.add-comments .inner-add-comments-box textarea:focus{
+.add-comment .inner-add-comments-box input:focus,
+.add-comment .inner-add-comments-box textarea:focus{
     border-color: #13ADE5;
 }
-.add-comments .inner-add-comments-box textarea{
+.add-comment .inner-add-comments-box textarea{
     height: 200px;
 }
 
