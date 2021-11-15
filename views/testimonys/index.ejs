@@ -27,36 +27,55 @@
                     <thead>
                         <tr>
                             <!-- <th scope="col">#</th> -->
-                            <th scope="col">Name</th>
-                            <th scope="col">Occupation</th>
-                            <th scope="col">Testimony</th>
-                            <th scope="col">Edit</th>
-                            <th scope="col">Delete</th>
+                            <th scope="col">
+                                <h5 style='font-size: 23px; color:#1a3d7d; font-weight: bold;'> Name </h5>
+                            </th>
+                            <th scope="col">
+                                <h5 style='font-size: 23px; color:#1a3d7d; font-weight: bold;'>Occupation </h5>
+                            </th>
+                            <th scope="col">
+                                <h5 style='font-size: 23px; color:#1a3d7d; font-weight: bold;'>Testimony </h5>
+                            </th>
+                            <th scope="col">
+                                <h5 style='font-size: 23px; color:#1a3d7d; font-weight: bold;'>Edit </h5>
+                            </th>
+                            <th scope="col">
+                                <h5 style='font-size: 23px; color:#1a3d7d; font-weight: bold;'>Delete</h5>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
+
                         <% for (let testimony of testimonys){%>
                             <tr>
                                 <!-- <th scope="row">
                                     <%= testimony._id %>
                                 </th> -->
                                 <td>
-                                    <%= testimony.name %>
+                                    <p style="font-size: 23px; color: #1a3d7d; margin-top: 10px;">
+                                        <%= testimony.name %>
+                                    </p>
                                 </td>
                                 <td>
-                                    <%= testimony.occupation %>
+                                    <p style="font-size: 23px; color: #1a3d7d; margin-top: 10px;">
+                                        <%= testimony.occupation %>
+                                    </p>
                                 </td>
+                                <% let length = 20 %>
                                 <td>
-                                    <%= testimony.testify %>
+                                    <p style="font-size: 23px; color: #1a3d7d; margin-top: 10px;">
+                                        <%= testimony.testify.substring(0, length - 3) + "..." %>
+                                    </p>
                                 </td>
                                 <td>
 
-                                    <a class="btn-1" href="/testimonys/<%=testimony._id%>/edit">Edit</a>
+                                    <a class="btn-1" href="/testimonys/<%=testimony._id%>/edit"
+                                        style="font-size: 23px; margin-top: 3px;">Edit</a>
 
                                 </td>
                                 <td>
                                     <form action="/testimonys/<%=testimony._id%>?_method=DELETE" method="POST">
-                                        <button class="btn-1">Delete</button>
+                                        <button class="btn-1" style="font-size: 23px; margin-top: 3px;">Delete</button>
                                     </form>
 
                                 </td>
