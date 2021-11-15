@@ -3259,16 +3259,12 @@ li.ui-timepicker-selected, .ui-timepicker-list li:hover, .ui-timepicker-list .ui
     }
 }
 
-
-
-
 .add-comments .inner-add-comments-box input:focus,
 .add-comments .inner-add-comments-box textarea:focus{
     border-color: #13ADE5;
 }
 .add-comments .inner-add-comments-box textarea{
     height: 200px;
-    display: block;
 }
 
 /* :: Doctors Timetable */
