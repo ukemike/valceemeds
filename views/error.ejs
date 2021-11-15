@@ -1,11 +1,32 @@
 <% layout('layouts/boilerplate')%>
-<div class="row">
-    <div class="col-6 offset-3">
-        <div class="alert alert-danger" role="alert">
-            <h4 class="alert-heading"><%=err.message%></h4>
-            <% if (process.env.NODE_ENV !== "production") { %>
-            <p><%= err.stack %></p>
-            <% } %>
+    <!-- :: Breadcrumb Header -->
+    <section class="breadcrumb-header" style="background-image: url(/assets/images/header/06_header.jpg)">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="banner">
+                        <h1>404 Error</h1>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><i class="fas fa-angle-right"></i></li>
+                            <li>404 Error</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
+
+    <!-- :: 404 Error -->
+    <section class="page-404-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <h2>404</h2>
+                    <h5><%=err.message%></h5>
+                    <a href="/" class="btn-1">Go Back To Homepage</a>
+                </div>
+            </div>
+        </div>
+    </section>

@@ -3238,12 +3238,30 @@ li.ui-timepicker-selected, .ui-timepicker-list li:hover, .ui-timepicker-list .ui
     position: relative;
     border: 2px solid #F9F9F9;
     padding: 12px;
-    width: 100%;
+    width: 50%;
     color: #1A3D7D;
     font-size: 13px;
     border-radius: 6px;
     background-color: #F9F9F9;
 }
+
+@media (max-width: 991px){
+    .add-comments .inner-add-comments-box input,
+    .add-comments .inner-add-comments-box textarea{
+        position: relative;
+        border: 2px solid #F9F9F9;
+        padding: 12px;
+        width: 100%;
+        color: #1A3D7D;
+        font-size: 13px;
+        border-radius: 6px;
+        background-color: #F9F9F9;
+    }
+}
+
+
+
+
 .add-comments .inner-add-comments-box input:focus,
 .add-comments .inner-add-comments-box textarea:focus{
     border-color: #13ADE5;

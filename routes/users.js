@@ -9,13 +9,9 @@ router.route('/register').get(users.renderRegister).post(catchAsync(users.regist
 
 router.route('/about').get(users.renderAboutUs)
 
-router.route('/table').get(users.renderTable)
-
 router.route('/faqs').get(users.renderFaqs)
 
 router.route('/contact').get(users.renderContact)
-
-// router.route('/home').get(users.renderHome)
 
 router.route('/main').get(users.renderMain)
 

@@ -6,15 +6,15 @@ const { isLoggedIn, isAuthor, validateTestimony } = require('../middleware');
 
 const Testimony = require('../models/testimony');
 
-router.route('/').get(catchAsync(testimonys.index));
+router.route('/').get((isLoggedIn, testimonys.index));
 
 router.route('/').post(isLoggedIn, validateTestimony, catchAsync(testimonys.createTestimony));
 
 router.get('/new', isLoggedIn, testimonys.renderNewForm);
 
-router.route('/:id').get(catchAsync(testimonys.showTestimony)).put(isLoggedIn, isAuthor, validateTestimony, catchAsync(testimonys.updateTestimony)).delete(isLoggedIn, isAuthor, catchAsync(testimonys.deleteTestimony));
+router.route('/:id').get(catchAsync(testimonys.showTestimony)).put(isLoggedIn, validateTestimony, catchAsync(testimonys.updateTestimony)).delete(isLoggedIn, catchAsync(testimonys.deleteTestimony));
 
-router.get('/:id/edit', isLoggedIn, isAuthor, catchAsync(testimonys.renderEditForm))
+router.get('/:id/edit', isLoggedIn, catchAsync(testimonys.renderEditForm))
 
 
 

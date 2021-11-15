@@ -50,21 +50,20 @@
                                     <%= testimony.testify %>
                                 </td>
                                 <td>
-                                    <% if( currentUser && testimony.author.equals(currentUser._id)) {%>
+
                                     <a class="btn-1" href="/testimonys/<%=testimony._id%>/edit">Edit</a>
-                                    <% } %>
+
                                 </td>
                                 <td>
-                                    <% if( currentUser && testimony.author.equals(currentUser._id)) {%>
-                                        <form action="/testimonys/<%=testimony._id%>?_method=DELETE" method="POST">
-                                            <button class="btn-1">Delete</button>
-                                        </form>
-                                        <% } %>
+                                    <form action="/testimonys/<%=testimony._id%>?_method=DELETE" method="POST">
+                                        <button class="btn-1">Delete</button>
+                                    </form>
+
                                 </td>
                             </tr>
                             <%}%>
                     </tbody>
-                    
+
                 </table>
             </div>
         </div>
