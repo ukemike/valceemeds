@@ -1330,6 +1330,17 @@ p {
     position: relative;
     margin-right: 40px;
 }
+
+@media screen and (min-width: 320px) {
+    .img-box{
+        margin-right: 63px;
+    }
+  }
+@media screen and (min-width: 768px) {
+    .img-box{
+        margin-left: 55px;
+    }
+  }
 .about-us .about-img-box .img-box img{
     border-radius: 3px;
 }
