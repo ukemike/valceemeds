@@ -48,12 +48,13 @@
                                 <!-- <th scope="row">
                                     <%= faq._id %>
                                 </th> -->
+                                <% let length = 20 %>
                                 <td>
                                     <p style="font-size: 23px; color: #1a3d7d; margin-top: 10px;">
-                                        <%= faq.question %>
+                                        <%= faq.question.substring(0, length - 3) + "..." %>
                                     </p>
                                 </td>
-                                <% let length = 20 %>
+                               
                                 <td>
                                     <p style="font-size: 23px; color: #1a3d7d; margin-top: 10px;">
                                         <%= faq.answer.substring(0, length - 3) + "..." %>
