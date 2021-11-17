@@ -104,7 +104,9 @@
                 <div class="content-box d-flex align-items-center justify-content-between">
                     <div class="logo">
                         <a href="/" class="logo-nav">
-                            <img class="img-fluid one" src="/assets/images/med.png" alt="01 Logo"><span style="color:#3961a0; font-size: 25px; font-weight: 800;margin-top: 15px;">Valcee Medcenter</span>
+                            <img class="img-fluid one" src="/assets/images/med.png" alt="01 Logo"><span
+                                style="color:#3961a0; font-size: 25px; font-weight: 800;margin-top: 15px;">Valcee
+                                Medcenter</span>
                         </a>
                         <a href="#open-nav-bar-menu" class="open-nav-bar">
                             <span></span>
@@ -128,24 +130,46 @@
                             <li class="item-level-1">
                                 <a href="/faqs" class="link-level-1">FAQs</a>
                             </li>
-                            <li class="item-level-1">
-                                <a href="/contact" class="link-level-1">Contact</a>
-                            </li>
-                            <li class="item-level-1">
-                                <a href="/login" class="link-level-1">Login</a>
-                            </li>
-                            <li class="item-level-1">
-                                <a href="/register" class="link-level-1">Register</a>
-                            </li>
-                            <li class="item-level-1">
-                                <a href="/testimonys/new" class="link-level-1">new</a>
-                            </li>
-                            <li class="item-level-1">
-                                <a href="/testimonys" class="link-level-1">Testimonys</a>
-                            </li>
-                            <li class="item-level-1">
-                                <a href="/logout" class="link-level-1">Logout</a>
-                            </li>
+                            <% if(currentUser) { %>
+                                <li class="item-level-1 has-menu">
+                                    <a href="#" class="link-level-1">Admin</a>
+                                    <ul class="level-2">
+                                        <li class="item-level-2">
+                                            <a href="/contact" class="link-level-2">Contact</a>
+                                        </li>
+                                        <li class="item-level-2">
+                                            <a href="/testimonys/new" class="link-level-2">New Testimonial</a>
+                                        </li>
+                                        <li class="item-level-2">
+                                            <a href="/testimonys" class="link-level-2">Testimonial List</a>
+                                        </li>
+                                        <li class="item-level-2">
+                                            <a href="/faqs/new" class="link-level-2">New FAQs</a>
+                                        </li>
+                                        <li class="item-level-2">
+                                            <a href="/faqs/list" class="link-level-2">FAQS List</a>
+                                        </li>
+                                        <% if(!currentUser) { %>
+                                            <li class="item-level-2">
+                                                <a href="/login" class="link-level-2">Login</a>
+                                            </li>
+                                            <li class="item-level-2">
+                                                <a href="/register" class="link-level-2">Sign Up</a>
+                                            </li>
+                                            <% } else { %>
+
+                                                <li class="item-level-2">
+                                                    <a href="/logout" class="link-level-2">Logout</a>
+                                                </li>
+                                                <% } %>
+                                    </ul>
+                                </li>
+                                <% } else { %>
+                                    <li class="item-level-1">
+                                        <a href="/contact" class="link-level-1">Contact</a>
+                                    </li>
+
+                                    <% } %>
                         </ul>
                     </div>
                     <ul class="nav-bar-tools d-flex align-items-center justify-content-between">
@@ -153,7 +177,8 @@
                             <span class="menu-icon open"><i class="fas fa-list"></i></span>
                         </li>
                         <li class="item btn">
-                            <a class="btn-1" href="http://www.patientfusion.com/doctor/valentine-ozoigbo-md-63371">Get an appointment</a>
+                            <a class="btn-1" href="http://www.patientfusion.com/doctor/valentine-ozoigbo-md-63371">Get
+                                an appointment</a>
                         </li>
 
                     </ul>
@@ -176,22 +201,22 @@
     <div class="menu-box">
         <div class="inner-menu">
             <div class="website-info">
-                <a href="/" class="logo"><img class="img-fluid" src="assets/images/med.png"
-                        alt="01 Logo" style="width: 40px;"></a>
-                        <p>
-                            Valcee Medical Center, is a personalized primary care center. We
-                            are very family oriented. We cherish and promote the family and
-                            friends network and will work diligently to provide excellent
-                            primary healthcare for you, your family and your friends.
-                            </p>
-                            <p>
-                             We have
-                            an extensive array of diagnostic tools in our medical center that
-                            we will meticulously use to diagnose and treat your illnesses. So,
-                            go on and schedule or reschedule an appointment for you or your
-                            family and let our excellent health team manage your health for
-                            you.
-                          </p>
+                <a href="/" class="logo"><img class="img-fluid" src="assets/images/med.png" alt="01 Logo"
+                        style="width: 40px;"></a>
+                <p>
+                    Valcee Medical Center, is a personalized primary care center. We
+                    are very family oriented. We cherish and promote the family and
+                    friends network and will work diligently to provide excellent
+                    primary healthcare for you, your family and your friends.
+                </p>
+                <p>
+                    We have
+                    an extensive array of diagnostic tools in our medical center that
+                    we will meticulously use to diagnose and treat your illnesses. So,
+                    go on and schedule or reschedule an appointment for you or your
+                    family and let our excellent health team manage your health for
+                    you.
+                </p>
             </div>
             <div class="contact-info">
                 <h4>Contact Info</h4>
@@ -205,7 +230,8 @@
                 <div class="contact-box">
                     <i class="flaticon-email"></i>
                     <div class="box">
-                        <a class="mail" href="mailto:Officeadmin@valceemedcenter.com">Officeadmin@valceemedcenter.com</a>
+                        <a class="mail"
+                            href="mailto:Officeadmin@valceemedcenter.com">Officeadmin@valceemedcenter.com</a>
                     </div>
                 </div>
                 <div class="contact-box">
@@ -240,12 +266,15 @@
                             <div class="col-lg-6">
                                 <div class="banner">
                                     <h1 class="handline" style="color: white;">Best Care For Your Family</h1>
-                                    <p class="about-website" style="color: white;">MedDoctors Are A Medical And Health Department Provider
+                                    <p class="about-website" style="color: white;">MedDoctors Are A Medical And Health
+                                        Department Provider
                                         Institutions. Suitable For Healthcare, Medical, Doctor, Dental, Dentist,
                                         Pharmacy, Health And Any Related Medical Care Field.</p>
                                     <!-- <a class="btn-1 btn-2" href="http://www.patientfusion.com/doctor/valentine-ozoigbo-md-63371">Get An Appointment</a>
                                     <a class="btn-1 btn-2" href="/about" style="background-color: white;">Learn More</a> -->
-                                    <a class="btn-1 btn-2" href="http://www.patientfusion.com/doctor/valentine-ozoigbo-md-63371">make an appointment</a>
+                                    <a class="btn-1 btn-2"
+                                        href="http://www.patientfusion.com/doctor/valentine-ozoigbo-md-63371">make an
+                                        appointment</a>
                                     <a class="btn-1 btn-3 ml-30" href="/about">Know More</a>
                                 </div>
                             </div>
@@ -385,7 +414,8 @@
                 <div class="col-lg-6">
                     <div class="about-img-box">
                         <div class="img-box">
-                            <img class="img-fluid" src="/assets/images/val1.jpeg" alt="02 About" style="height: 100%; width: 80%; margin-left: 64px;">
+                            <img class="img-fluid" src="/assets/images/val1.jpeg" alt="02 About"
+                                style="height: 100%; width: 80%; margin-left: 64px;">
                         </div>
                     </div>
                 </div>
@@ -541,44 +571,19 @@
                 <div class="col-lg-4 d-flex align-items-center justify-content-between">
                     <div class="text-box">
                         <div class="sec-title sec-title-2">
-                            <p class="sec-explain">Valcee Medical Center Are A Medical And Health Department Provider Institutions.
+                            <p class="sec-explain" style="font-size: 25px;">Valcee Medical Center Are A Medical And
+                                Health Department Provider Institutions.
                                 Suitable For Healthcare, Medical, Doctor.</p>
                         </div>
-                        <div class="skills">
-                            <div class="skill-box">
-                                <div class="skill-top">
-                                    <span class="name">Best Of Departments</span>
-                                    <span class="number">98%</span>
-                                </div>
-                                <div class="skill-line">
-                                    <div class="line" data-value="98%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-box">
-                                <div class="skill-top">
-                                    <span class="name">Leading Technology</span>
-                                    <span class="number">85%</span>
-                                </div>
-                                <div class="skill-line">
-                                    <div class="line" data-value="85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-box">
-                                <div class="skill-top">
-                                    <span class="name">High Packages</span>
-                                    <span class="number">95%</span>
-                                </div>
-                                <div class="skill-line">
-                                    <div class="line" data-value="95%"></div>
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="row">
                             <div class="col-4 d-flex align-items-center justify-content-between">
                                 <img class="img-fluid" src="assets/images/signature.png" alt="About signature">
                             </div>
                             <div class="col d-flex align-items-center justify-content-between">
-                                <a class="btn-1 btn-2" href="http://www.patientfusion.com/doctor/valentine-ozoigbo-md-63371">Get An Appointment</a>
+                                <a class="btn-1 btn-2"
+                                    href="http://www.patientfusion.com/doctor/valentine-ozoigbo-md-63371">Get An
+                                    Appointment</a>
                             </div>
                         </div>
                     </div>
@@ -599,7 +604,8 @@
                         <p class="sec-explain">MedDoctors Are A Medical And Health Department Provider Institutions.
                             Suitable For Healthcare, Medical, Doctor, Dental, Dentist, Pharmacy, Health And Any Related
                             Medical Care Field.</p>
-                        <a class="btn-1 btn-3 sec-btn" href="http://www.patientfusion.com/doctor/valentine-ozoigbo-md-63371">Get an appointment</a>
+                        <a class="btn-1 btn-3 sec-btn"
+                            href="http://www.patientfusion.com/doctor/valentine-ozoigbo-md-63371">Get an appointment</a>
                     </div>
                 </div>
             </div>
@@ -622,7 +628,8 @@
                         <p class="sec-explain">MedDoctors Are A Medical And Health Department Provider Institutions.
                             Suitable For Healthcare, Medical, Doctor, Dental, Dentist, Pharmacy, Health And Any Related
                             Medical Care Field.</p>
-                        <a class="btn-1 btn-5 sec-btn" href="http://www.patientfusion.com/doctor/valentine-ozoigbo-md-63371">Get An Appointment</a>
+                        <a class="btn-1 btn-5 sec-btn"
+                            href="http://www.patientfusion.com/doctor/valentine-ozoigbo-md-63371">Get An Appointment</a>
                     </div>
                 </div>
             </div>
@@ -700,16 +707,22 @@
                 <div class="col-md-10 offset-md-1">
                     <div class="testimonial-carousel owl-carousel owl-theme">
                         <% for (let testimony of testimonys) {%>
-                        <div class="testimonial-carousel-item">
-                            <i class="quote flaticon-left-quote"></i>
-                            <div class="content-text-box"><%= testimony.testify %></div>
-                            <div class="testimonial-doctor">
-                                <h4><%= testimony.name %></h4>
-                                <span><%= testimony.occupation %></span>
+                            <div class="testimonial-carousel-item">
+                                <i class="quote flaticon-left-quote"></i>
+                                <div class="content-text-box">
+                                    <%= testimony.testify %>
+                                </div>
+                                <div class="testimonial-doctor">
+                                    <h4>
+                                        <%= testimony.name %>
+                                    </h4>
+                                    <span>
+                                        <%= testimony.occupation %>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        <%}%>
-                       
+                            <%}%>
+
                     </div>
                 </div>
             </div>
@@ -723,7 +736,10 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-3">
                         <div class="logo">
-                            <img class="img-fluid" src="/assets/images/med.png" alt="Footer Logo" style="width: 30px;"><span style="color:white; font-size: 25px; font-weight: 800;margin-top: 15px;">Valcee Medcenter</span>
+                            <img class="img-fluid" src="/assets/images/med.png" alt="Footer Logo"
+                                style="width: 30px;"><span
+                                style="color:white; font-size: 25px; font-weight: 800;margin-top: 15px;">Valcee
+                                Medcenter</span>
                             <p>MedDoctors Are A Medical And Health Department Provider Institutions. Suitable For
                                 Healthcare, Medical, Doctor, Dental, Dentist, Pharmacy, Health And Any Related Medical
                                 Care Field.</p>
@@ -740,13 +756,10 @@
                             <h4>Quick Link</h4>
                         </div>
                         <ul class="links">
-                            <li><a href="01_about-us.html">About Us</a></li>
-                            <li><a href="01_doctors.html">Our Doctors</a></li>
-                            <li><a href="01_testimonial.html">Testimonial</a></li>
-                            <li><a href="01_gallery.html">Gallery</a></li>
-                            <li><a href="02_blog-2.html">Blog</a></li>
-                            <li><a href="01_contact.html">Contact</a></li>
-                            <li><a href="01_appointment.html">Appointment</a></li>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                            <li><a href="http://www.patientfusion.com/doctor/valentine-ozoigbo-md-63371">Appointment</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-2">
@@ -754,11 +767,7 @@
                             <h4>Help Links</h4>
                         </div>
                         <ul class="links">
-                            <li><a href="01_department.html">Departments</a></li>
-                            <li><a href="01_sponsors.html">Sponsors</a></li>
-                            <li><a href="01_faqs.html">FAQs</a></li>
-                            <li><a href="01_shop.html">Shop</a></li>
-                            <li><a href="error-page.html">Error Page</a></li>
+                            <li><a href="/faqs">FAQs</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4">
@@ -779,13 +788,7 @@
         </div>
         <div class="copyright">
             <div class="container">
-                <p>@ 2020 MedDoctors. With Love by <a
-                        href="https://themeforest.net/user/ar-coder/portfolio">AR-Coder</a></p>
-                <ul>
-                    <li><a href="#">Terms &amp; Conditions </a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Sitemap</a></li>
-                </ul>
+                <p>@ 2020 Valcee Medical Center.
             </div>
         </div>
     </footer>

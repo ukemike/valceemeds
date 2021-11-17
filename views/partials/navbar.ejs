@@ -43,7 +43,9 @@
             <div class="content-box d-flex align-items-center justify-content-between">
                 <div class="logo">
                     <a href="/" class="logo-nav">
-                        <img class="img-fluid one" src="/assets/images/med.png" alt="01 Logo"><span style="color:#3961a0; font-size: 25px; font-weight: 800;margin-top: 15px;">Valcee Medcenter</span>
+                        <img class="img-fluid one" src="/assets/images/med.png" alt="01 Logo"><span
+                            style="color:#3961a0; font-size: 25px; font-weight: 800;margin-top: 15px;">Valcee
+                            Medcenter</span>
                     </a>
                     <a href="#open-nav-bar-menu" class="open-nav-bar">
                         <span></span>
@@ -67,24 +69,46 @@
                         <li class="item-level-1">
                             <a href="/faqs" class="link-level-1">FAQs</a>
                         </li>
-                        <li class="item-level-1">
-                            <a href="/contact" class="link-level-1">Contact</a>
-                        </li>
-                        <li class="item-level-1">
-                            <a href="/login" class="link-level-1">Login</a>
-                        </li>
-                        <li class="item-level-1">
-                            <a href="/register" class="link-level-1">Register</a>
-                        </li>
-                        <li class="item-level-1">
-                            <a href="/testimonys/new" class="link-level-1">new</a>
-                        </li>
-                        <li class="item-level-1">
-                            <a href="/testimonys" class="link-level-1">Testimonys</a>
-                        </li>
-                        <li class="item-level-1">
-                            <a href="/logout" class="link-level-1">Logout</a>
-                        </li>
+                        <% if(currentUser) { %>
+                            <li class="item-level-1 has-menu">
+                                <a href="#" class="link-level-1">Admin</a>
+                                <ul class="level-2">
+                                    <li class="item-level-2">
+                                        <a href="/contact" class="link-level-2">Contact</a>
+                                    </li>
+                                    <li class="item-level-2">
+                                        <a href="/testimonys/new" class="link-level-2">New Testimonial</a>
+                                    </li>
+                                    <li class="item-level-2">
+                                        <a href="/testimonys" class="link-level-2">Testimonial List</a>
+                                    </li>
+                                    <li class="item-level-2">
+                                        <a href="/faqs/new" class="link-level-2">New FAQs</a>
+                                    </li>
+                                    <li class="item-level-2">
+                                        <a href="/faqs/list" class="link-level-2">FAQS List</a>
+                                    </li>
+                                    <% if(!currentUser) { %>
+                                        <li class="item-level-2">
+                                            <a href="/login" class="link-level-2">Login</a>
+                                        </li>
+                                        <li class="item-level-2">
+                                            <a href="/register" class="link-level-2">Sign Up</a>
+                                        </li>
+                                        <% } else { %>
+
+                                            <li class="item-level-2">
+                                                <a href="/logout" class="link-level-2">Logout</a>
+                                            </li>
+                                            <% } %>
+                                </ul>
+                            </li>
+                            <% } else { %>
+                                <li class="item-level-1">
+                                    <a href="/contact" class="link-level-1">Contact</a>
+                                </li>
+
+                                <% } %>
                     </ul>
                 </div>
                 <ul class="nav-bar-tools d-flex align-items-center justify-content-between">

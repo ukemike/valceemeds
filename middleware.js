@@ -1,4 +1,5 @@
 const { testimonySchema } = require('./schemas.js');
+const { faqSchema } = require('./schemas.js');
 const ExpressError = require('./utils/ExpressError');
 const Testimony = require('./models/testimony');
 
@@ -13,6 +14,16 @@ module.exports.isLoggedIn = (req, res, next) => {
 
 module.exports.validateTestimony = (req, res, next) => {
     const { error } = testimonySchema.validate(req.body);
+    if (error) {
+        const msg = error.details.map(el => el.message).join(',')
+        throw new ExpressError(msg, 400)
+    } else {
+        next();
+    }
+}
+
+module.exports.validateFaqs = (req, res, next) => {
+    const { error } = faqSchema.validate(req.body);
     if (error) {
         const msg = error.details.map(el => el.message).join(',')
         throw new ExpressError(msg, 400)

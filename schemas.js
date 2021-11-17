@@ -31,4 +31,11 @@ module.exports.testimonySchema = Joi.object({
     }).required()
 });
 
+module.exports.faqSchema = Joi.object({
+    faq: Joi.object({
+        question: Joi.string().required().escapeHTML(),
+        answer: Joi.string().required().escapeHTML()
+    }).required()
+});
+
 

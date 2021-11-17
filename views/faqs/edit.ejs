@@ -1,0 +1,45 @@
+<% layout('layouts/boilerplate')%>
+
+    <section class="breadcrumb-header" style="background-image: url(/assets/images/hospital.jpeg)">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="banner">
+                        <h1 style="color: white;">Edit FAQs</h1>
+                        <ul>
+                            <li><a href="/" style="color: white;">Home</a></li>
+                            <li><i class="fas fa-angle-right"></i></li>
+                            <li style="color: white;">Edit FAQs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- :: Contact Us Page -->
+    <div class="contact-us py-100">
+        <div class="container">
+            <div class="col-lg-12">
+                <div class="add-comment">
+                    <div class="inner-add-comments">
+                        <form action="/faqs/<%=faq._id%>?_method=PUT" method="POST" novalidate>
+                            <div class="inner-add-comments-box">
+                                <input type="text" id="question" name="faq[question]" value="<%=faq.question %>"
+                                    required placeholder="Question">
+                            </div>
+
+                            <div class="inner-add-comments-box">
+                                <textarea type="text" id="answer" name="faq[answer]" placeholder="Answer" required><%=faq.answer %></textarea>
+                            </div>
+
+                            <div class="col-md-12 inner-add-comments-box last">
+                                <button class="btn-1">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

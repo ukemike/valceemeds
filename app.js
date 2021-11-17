@@ -18,6 +18,7 @@ const helmet = require("helmet");
 const mongoSanitize = require("express-mongo-sanitize");
 const userRoutes = require("./routes/users");
 const testimonyRoutes = require("./routes/testimony");
+const faqRoutes = require("./routes/faqs")
 
 const MongoDBStore = require("connect-mongo")(session);
 
@@ -97,6 +98,7 @@ app.use((req, res, next) => {
 
 app.use("/", userRoutes);
 app.use("/testimonys", testimonyRoutes);
+app.use("/faqs", faqRoutes);
 
 app.get("/", (req, res) => {
   const testimonys = Testimony.find({}, (err, testimonys) => {

@@ -9,7 +9,7 @@ router.route('/register').get(users.renderRegister).post(catchAsync(users.regist
 
 router.route('/about').get(users.renderAboutUs)
 
-router.route('/faqs').get(users.renderFaqs)
+router.route('/faq').get(users.renderFaqs)
 
 router.route('/contact').get(users.renderContact)
 

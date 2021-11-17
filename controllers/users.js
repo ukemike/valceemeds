@@ -12,16 +12,12 @@ module.exports.renderTable = (req, res) => {
     res.render('users/table');
 }
 
-// module.exports.renderHome = (req, res) => {
-//     res.render('users/home');
-// }
-
 module.exports.renderMain = (req, res) => {
     res.render('users/main');
 }
 
 module.exports.renderFaqs = (req, res) => {
-    res.render('users/faqs');
+    res.render('users/faq');
 }
 
 module.exports.renderContact = (req, res) => {
@@ -59,5 +55,5 @@ module.exports.logout = (req, res) => {
     req.logout();
     // req.session.destroy();
     req.flash('success', "Goodbye!");
-    res.redirect('/about');
+    res.redirect('/');
 }

@@ -7,11 +7,11 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="banner">
-                        <h1 style="color: white;">Testimonials</h1>
+                        <h1 style="color: white;">Faqs</h1>
                         <ul>
                             <li><a href="/" style="color: white;">Home</a></li>
                             <li><i class="fas fa-angle-right"></i></li>
-                            <li style="color: white;">Testimonials</li>
+                            <li style="color: white;">Faqs</li>
                         </ul>
                     </div>
                 </div>
@@ -28,53 +28,45 @@
                         <tr>
                             <!-- <th scope="col">#</th> -->
                             <th scope="col">
-                                <h5 style='font-size: 23px; color:#1a3d7d; font-weight: bold;'> Name </h5>
+                                <h5 style='font-size: 23px; color:#1a3d7d; font-weight: bold;'> Question </h5>
                             </th>
                             <th scope="col">
-                                <h5 style='font-size: 23px; color:#1a3d7d; font-weight: bold;'>Occupation </h5>
-                            </th>
-                            <th scope="col">
-                                <h5 style='font-size: 23px; color:#1a3d7d; font-weight: bold;'>Testimony </h5>
+                                <h5 style='font-size: 23px; color:#1a3d7d; font-weight: bold;'>Answer </h5>
                             </th>
                             <th scope="col">
                                 <h5 style='font-size: 23px; color:#1a3d7d; font-weight: bold;'>Edit </h5>
                             </th>
                             <th scope="col">
-                                <h5 style='font-size: 23px; color:#1a3d7d; font-weight: bold;'>Delete</h5>
+                                <h5 style='font-size: 23px; color:#1a3d7d; font-weight: bold;'>Delete </h5>
                             </th>
                         </tr>
                     </thead>
                     <tbody>
 
-                        <% for (let testimony of testimonys){%>
+                        <% for (let faq of faqs){%>
                             <tr>
                                 <!-- <th scope="row">
-                                    <%= testimony._id %>
+                                    <%= faq._id %>
                                 </th> -->
                                 <td>
                                     <p style="font-size: 23px; color: #1a3d7d; margin-top: 10px;">
-                                        <%= testimony.name %>
-                                    </p>
-                                </td>
-                                <td>
-                                    <p style="font-size: 23px; color: #1a3d7d; margin-top: 10px;">
-                                        <%= testimony.occupation %>
+                                        <%= faq.question %>
                                     </p>
                                 </td>
                                 <% let length = 20 %>
                                 <td>
                                     <p style="font-size: 23px; color: #1a3d7d; margin-top: 10px;">
-                                        <%= testimony.testify.substring(0, length - 3) + "..." %>
+                                        <%= faq.answer.substring(0, length - 3) + "..." %>
                                     </p>
                                 </td>
                                 <td>
 
-                                    <a class="btn-1" href="/testimonys/<%=testimony._id%>/edit"
+                                    <a class="btn-1" href="/faqs/<%=faq._id%>/edit"
                                         style="font-size: 23px; margin-top: 3px;">Edit</a>
 
                                 </td>
                                 <td>
-                                    <form action="/testimonys/<%=testimony._id%>?_method=DELETE" method="POST">
+                                    <form action="/faqs/<%=faq._id%>?_method=DELETE" method="POST">
                                         <button class="btn-1" style="font-size: 23px; margin-top: 3px;">Delete</button>
                                     </form>
 
