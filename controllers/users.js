@@ -20,9 +20,9 @@ module.exports.renderFaqs = (req, res) => {
     res.render('users/faq');
 }
 
-module.exports.renderContact = (req, res) => {
-    res.render('users/contact');
-}
+// module.exports.renderContact = (req, res) => {
+//     res.render('users/contact');
+// }
 
 module.exports.register = async (req, res, next) => {
     try {

@@ -8,7 +8,7 @@ const Contacts = require('../models/contact');
 
 router.route('/list').get((isLoggedIn, contacts.index));
 
-router.route('/').get((contacts.indexs));
+// router.route('/').get((contacts.indexs));
 
 router.route('/').get((contacts.indexexe));
 

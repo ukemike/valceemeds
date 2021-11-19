@@ -113,6 +113,17 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/contact", (req, res) => {
+  Contact.find({}, (err, contacts) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render("contact", { contacts });
+    }
+  }
+  );
+});
+
 app.all("*", (req, res, next) => {
   next(new ExpressError("Page Not Found", 404));
 });

@@ -11,7 +11,7 @@ router.route('/about').get(users.renderAboutUs)
 
 router.route('/faq').get(users.renderFaqs)
 
-router.route('/contact').get(users.renderContact)
+// router.route('/contact').get(users.renderContact)
 
 router.route('/main').get(users.renderMain)
 

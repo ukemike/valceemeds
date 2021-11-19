@@ -1,0 +1,85 @@
+<% layout('layouts/boilerplate')%>
+        <!-- :: Breadcrumb Header -->
+        <section class="breadcrumb-header" style="background-image: url(/assets/images/hospital.jpeg)">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="banner">
+                            <h1 style="color: white;">Contact Us</h1>
+                            <ul>
+                                <li><a href="/" style="color: white;">Home</a></li>
+                                <li><i class="fas fa-angle-right"></i></li>
+                                <li style="color: white;">Contact Us</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- :: Contact Us Page -->
+        <div class="contact-us py-100">
+            <div class="container">
+                <div class="contact-info-content">
+                    <% for (let contact of contacts){%>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="contact-box">
+                                <i class="flaticon-call"></i>
+                                <div class="box">
+                                    <a class="phone" href="tel:<%= contact.phone %>"><%= contact.phone %></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="contact-box">
+                                <i class="flaticon-location"></i>
+                                <div class="box">
+                                    <p><%= contact.address %></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="contact-box">
+                                <i class="flaticon-email"></i>
+                                <div class="box">
+                                    <a class="mail" href="mailto:<%= contact.email %>"><%= contact.email %></a>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <%}%>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="add-comments">
+                            <div class="inner-add-comments">
+                                <form action="https://formspree.io/f/xjvjnvnn" method="post">
+                                <div class="row">
+                                    
+                                    <div class="col-md-6 inner-add-comments-box">
+                                        <input type="text" name="name" placeholder="Name">
+                                    </div>
+                                    <div class="col-md-6 inner-add-comments-box">
+                                        <input type="Email" name="email" placeholder="Email">
+                                    </div>
+                                    <div class="col-md-12 inner-add-comments-box">
+                                        <input type="text" name="subject" placeholder="Subject">
+                                    </div>
+                                    <div class="col-md-12 inner-add-comments-box">
+                                        <textarea placeholder="Your Message Here " name="message"></textarea>
+                                    </div>
+                                    <div class="col-md-12 inner-add-comments-box last">
+                                        <button class="btn-1">Submit</button>
+                                    </div>
+                                
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

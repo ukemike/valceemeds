@@ -5,10 +5,10 @@ module.exports.index = async (req, res) => {
   res.render("contacts/list", { contacts });
 };
 
-module.exports.indexs = async (req, res) => {
-  const contacts = await Contact.find({})
-  res.render("users/contact", { contacts });
-};
+// module.exports.indexs = async (req, res) => {
+//   const contacts = await Contact.find({})
+//   res.render("users/contact", { contacts });
+// };
 
 module.exports.indexexe = async (req, res) => {
   const contacts = await Contact.find({})
