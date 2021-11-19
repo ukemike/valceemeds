@@ -22,12 +22,13 @@
         <div class="contact-us py-100">
             <div class="container">
                 <div class="contact-info-content">
+                    <% for (let contact of contacts){%>
                     <div class="row">
                         <div class="col-md-6 col-lg-4">
                             <div class="contact-box">
                                 <i class="flaticon-call"></i>
                                 <div class="box">
-                                    <a class="phone" href="tel:0088609830">008860 9830</a>
+                                    <a class="phone" href="tel:0088609830"><%= contact.phone %></a>
                                     <br>
                                 </div>
                             </div>
@@ -36,7 +37,7 @@
                             <div class="contact-box">
                                 <i class="flaticon-email"></i>
                                 <div class="box">
-                                    <a class="mail" href="mailto:Officeadmin@valceemedcenter.com">Officeadmin@valceemedcenter.com</a>
+                                    <a class="mail" href="mailto:Officeadmin@valceemedcenter.com"><%= contact.email %></a>
                                 </div>
                             </div>
                         </div>
@@ -44,12 +45,12 @@
                             <div class="contact-box">
                                 <i class="flaticon-location"></i>
                                 <div class="box">
-                                    <p>1620 S. White Station Rd,</p>
-                                    <p>Memphis, TN 38117.</p>
+                                    <p><%= contact.address %></p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <%}%>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">

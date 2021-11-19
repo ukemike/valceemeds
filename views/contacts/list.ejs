@@ -1,0 +1,89 @@
+<% layout('layouts/boilerplate')%>
+
+    <!-- :: Breadcrumb Header -->
+    <section class="breadcrumb-header" style="background-image: url(/assets/images/hospital.jpeg)">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="banner">
+                        <h1 style="color: white;">Contacts</h1>
+                        <ul>
+                            <li><a href="/" style="color: white;">Home</a></li>
+                            <li><i class="fas fa-angle-right"></i></li>
+                            <li style="color: white;">Contacts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- :: FAQs -->
+    <section class="faqs-page py-100-70">
+        <div class="container">
+            <div class="col-lg-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <!-- <th scope="col">#</th> -->
+                            <th scope="col">
+                                <h5 style='font-size: 23px; color:#1a3d7d; font-weight: bold;'> Phone </h5>
+                            </th>
+                            <th scope="col">
+                                <h5 style='font-size: 23px; color:#1a3d7d; font-weight: bold;'>Address </h5>
+                            </th>
+                            <th scope="col">
+                                <h5 style='font-size: 23px; color:#1a3d7d; font-weight: bold;'>Email </h5>
+                            </th>
+                            <th scope="col">
+                                <h5 style='font-size: 23px; color:#1a3d7d; font-weight: bold;'>Edit </h5>
+                            </th>
+                            <th scope="col">
+                                <h5 style='font-size: 23px; color:#1a3d7d; font-weight: bold;'>Delete </h5>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <% for (let contact of contacts){%>
+                            <tr>
+                                <!-- <th scope="row">
+                                    <%= contact._id %>
+                                </th> -->
+                                <td>
+                                    <p style="font-size: 23px; color: #1a3d7d; margin-top: 10px;">
+                                        <%= contact.phone %>
+                                    </p>
+                                </td>
+                               
+                                <td>
+                                    <p style="font-size: 23px; color: #1a3d7d; margin-top: 10px;">
+                                        <%= contact.address %>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="font-size: 23px; color: #1a3d7d; margin-top: 10px;">
+                                        <%= contact.email %>
+                                    </p>
+                                </td>
+                                <td>
+
+                                    <a class="btn-1" href="/contacts/<%=contact._id%>/edit"
+                                        style="font-size: 23px; margin-top: 3px;">Edit</a>
+
+                                </td>
+                                <td>
+                                    <form action="/contacts/<%=contact._id%>?_method=DELETE" method="POST">
+                                        <button class="btn-1" style="font-size: 23px; margin-top: 3px;">Delete</button>
+                                    </form>
+
+                                </td>
+                            </tr>
+                            <%}%>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </section>

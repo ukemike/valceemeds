@@ -14,11 +14,13 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user");
 const Testimony = require("./models/testimony");
+const Contact = require("./models/contact");
 const helmet = require("helmet");
 const mongoSanitize = require("express-mongo-sanitize");
 const userRoutes = require("./routes/users");
 const testimonyRoutes = require("./routes/testimony");
-const faqRoutes = require("./routes/faqs")
+const faqRoutes = require("./routes/faqs");
+const contactRoutes = require("./routes/contacts");
 
 const MongoDBStore = require("connect-mongo")(session);
 
@@ -99,9 +101,10 @@ app.use((req, res, next) => {
 app.use("/", userRoutes);
 app.use("/testimonys", testimonyRoutes);
 app.use("/faqs", faqRoutes);
+app.use("/contacts", contactRoutes);
 
 app.get("/", (req, res) => {
-  const testimonys = Testimony.find({}, (err, testimonys) => {
+  Testimony.find({}, (err, testimonys) => {
     if (err) {
       console.log(err);
     } else {
